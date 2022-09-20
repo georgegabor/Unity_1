@@ -18,11 +18,13 @@ class HelloWorld : MonoBehaviour
         a = 3;
         b = 6;
         c = a + b;
-
-        Debug.Log(c);
         c = 11;
-        Debug.Log(c);
+    }
 
+    [SerializeField] int a, b, c;
 
+    void OnValidate()
+    {
+        Debug.Log("a: " + a + " b: " + b + " c: " + c);
     }
 }
