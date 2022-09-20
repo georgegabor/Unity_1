@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] float speed = 5;
+    [SerializeField] float angularSpeed = 180;
 
     void Update()
     {
@@ -26,7 +27,9 @@ public class PlayerMover : MonoBehaviour
 
         transform.position  += velocity * Time.deltaTime * speed;
 
-        if (velocity != Vector3.zero)
-        transform.rotation = Quaternion.LookRotation(velocity);
+        if (velocity != Vector3.zero) { 
+            Quaternion targetRot = Quaternion.LookRotation(velocity);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, angularSpeed * Time.deltaTime);
+        }
     }
 }
