@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] float speed = 5;
-    [SerializeField] float angularSpeed = 180;
+    [SerializeField]
+    float speed = 5;
+
+    [SerializeField]
+    float angularSpeed = 180;
 
     void Update()
     {
@@ -25,11 +28,16 @@ public class PlayerMover : MonoBehaviour
         Vector3 velocity = new Vector3(x, 0, y);
         velocity.Normalize();
 
-        transform.position  += velocity * Time.deltaTime * speed;
+        transform.position += velocity * Time.deltaTime * speed;
 
-        if (velocity != Vector3.zero) { 
+        if (velocity != Vector3.zero)
+        {
             Quaternion targetRot = Quaternion.LookRotation(velocity);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, angularSpeed * Time.deltaTime);
+            transform.rotation =
+                Quaternion
+                    .RotateTowards(transform.rotation,
+                    targetRot,
+                    angularSpeed * Time.deltaTime);
         }
     }
 }
