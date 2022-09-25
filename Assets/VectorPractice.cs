@@ -7,7 +7,7 @@ public class VectorPractice : MonoBehaviour
     void OnValidate()
     {
         Vector2 vector = new Vector2(2, 5);
-        
+
         float xv = vector.x;
         float xy = vector.y;
         float f1 = 1.5f;
@@ -19,7 +19,9 @@ public class VectorPractice : MonoBehaviour
 
         Vector3 vUp = Vector3.up;
 
-        Vector3 v1 = new Vector3(1 ,2 ,6) , v2  = new Vector3(1 ,2 ,6);
+        Vector3
+            v1 = new Vector3(1, 2, 6),
+            v2 = new Vector3(1, 2, 6);
         Vector3 vSum = v1 + v2;
         Vector3 vProduct = v1 * f1;
         float vProductLength = vProduct.magnitude;
@@ -33,7 +35,5 @@ public class VectorPractice : MonoBehaviour
         float dist1 = (v1 - v2).magnitude;
         float dist2 = Vector3.Distance(v1, v2);
         Debug.Log("dist1: " + dist1);
-
-
     }
 }
