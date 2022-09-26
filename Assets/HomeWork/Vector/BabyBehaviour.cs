@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class BabyBehaviour : MonoBehaviour
 {
+    // [Header("My Variables")]
+    // public Vector3 rotationPerSecond;
     [SerializeField]
     float speed = 10;
 
     [SerializeField]
     float angularSpeed = 180;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
+    // void Update()
+    // {
+    //     transform.Rotate(rotationPerSecond * Time.deltaTime);
+    // }
     // Update is called once per frame
     void Update()
     {
