@@ -23,9 +23,8 @@ public class BabyBehaviour : MonoBehaviour
         Vector3 velocity = KeyboardInputsHandler();
 
         // Objects x must be -90 to stand straight up
-        Vector3 eulerRotation = transform.rotation.eulerAngles;
-        transform.rotation = Quaternion.Euler(270, eulerRotation.y, 0);
-
+        // Vector3 eulerRotation = transform.rotation.eulerAngles;
+        // transform.rotation = Quaternion.Euler(270, eulerRotation.y, 0);
         // transform.eulerAngles =
         //     new Vector3(transform.eulerAngles.x - 90,
         //         transform.eulerAngles.y,

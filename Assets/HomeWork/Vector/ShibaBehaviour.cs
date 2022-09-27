@@ -23,22 +23,22 @@ public class ShibaBehaviour : MonoBehaviour
         Vector3 selfPoint = transform.position;
 
         // Objects x must be -90 to stand straight up
-        // Vector3 eulerRotation = transform.rotation.eulerAngles;
-        // transform.rotation = Quaternion.Euler(-90, eulerRotation.y, 90);
+        Vector3 eulerRotation = transform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(-90, eulerRotation.y, 90);
 
-        // transform.position =
-        //     Vector3.MoveTowards(selfPoint, targetPoint, maxStep);
+        transform.position =
+            Vector3.MoveTowards(selfPoint, targetPoint, maxStep);
 
-        // if ((targetPoint - selfPoint) != Vector3.zero)
-        // {
-        //     transform.rotation =
-        //         Quaternion.LookRotation(targetPoint - selfPoint);
-        //     // Quaternion targetRot =
-        //     //     Quaternion.LookRotation(targetPoint - selfPoint);
+        if ((targetPoint - selfPoint) != Vector3.zero)
+        {
+            transform.rotation =
+                Quaternion.LookRotation(targetPoint - selfPoint);
+            // Quaternion targetRot =
+            //     Quaternion.LookRotation(targetPoint - selfPoint);
 
-        //     // transform.rotation =
-        //     //     Quaternion
-        //     //         .RotateTowards(transform.rotation, targetRot, maxStep);
-        // }
+            // transform.rotation =
+            //     Quaternion
+            //         .RotateTowards(transform.rotation, targetRot, maxStep);
+        }
     }
 }
