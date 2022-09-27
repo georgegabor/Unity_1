@@ -5,8 +5,8 @@ using UnityEngine;
 public class Follower : MonoBehaviour
 {
 
-   [SerializeField] float speed = 2;
-   [SerializeField] Transform target;
+    [SerializeField] float speed = 2;
+    [SerializeField] Transform target;
 
     // Update is called once per frame
     void Update()
@@ -14,8 +14,10 @@ public class Follower : MonoBehaviour
         Vector3 targetPoint = target.position;
         Vector3 selfPoint = transform.position;
 
-        float maxStep = speed *  Time.deltaTime;
+        float maxStep = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(selfPoint, targetPoint, maxStep);
-        transform.rotation = Quaternion.LookRotation(targetPoint - selfPoint);
+
+        if (targetPoint != selfPoint)
+            transform.rotation = Quaternion.LookRotation(targetPoint - selfPoint);
     }
 }
