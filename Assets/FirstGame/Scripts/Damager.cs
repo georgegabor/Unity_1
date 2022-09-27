@@ -10,7 +10,6 @@ public class Damager : MonoBehaviour
 
         if (damageable != null)
         {
-            Debug.Log("Damage " + damageable.name + "with " + damage + " unit.");
             damageable.Damage(damage);
         }
     }
