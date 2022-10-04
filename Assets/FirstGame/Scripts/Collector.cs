@@ -1,17 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Collector : MonoBehaviour
 {
-    [SerializeField] int value = 1;
+    int sum = 0;
+    [SerializeField] TMP_Text displayedText;
+
+    private void Start()
+    {
+        UpdateText();
+    }
     private void OnTriggerEnter(Collider other)
     {
         Collectable collectable = other.GetComponent<Collectable>();
 
         if (collectable != null)
         {
-            collectable.Collect(value);
+            sum += collectable.value;
+            UpdateText();
         }
+    }
+
+    private void UpdateText()
+    {
+        if (displayedText != null)
+            displayedText.text = "Score: " + sum;
     }
 }

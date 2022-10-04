@@ -814,8 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3dcec798c69c334b83d6019232d17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sum: 0
-  displayedText: {fileID: 1545355443}
+  value: 1
 --- !u!1 &476495684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5050c846380144eb2a5d78f613519e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   angularSpeed: 180
 --- !u!4 &973336935
 Transform:
@@ -1240,7 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb1d382fd67210409b764eb534847b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  displayedText: {fileID: 1545355443}
 --- !u!1 &1046425271
 GameObject:
   m_ObjectHideFlags: 0

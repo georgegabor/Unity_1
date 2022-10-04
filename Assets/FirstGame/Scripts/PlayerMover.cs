@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField]
-    float speed = 5;
+    float speed = 10;
 
     [SerializeField]
     float angularSpeed = 180;
