@@ -2285,7 +2285,7 @@ PrefabInstance:
       objectReference: {fileID: 973336935}
     - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
       propertyPath: speedOverDistance.m_Curve.Array.data[1].time
-      value: 3.7467182
+      value: 1.9812152
       objectReference: {fileID: 0}
     - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
       propertyPath: speedOverDistance.m_Curve.Array.data[2].time
@@ -2293,7 +2293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
       propertyPath: speedOverDistance.m_Curve.Array.data[1].value
-      value: 5.447096
+      value: 4.2034893
       objectReference: {fileID: 0}
     - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
       propertyPath: speedOverDistance.m_Curve.Array.data[2].value
