@@ -814,6 +814,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3dcec798c69c334b83d6019232d17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounds:
+    m_Center: {x: -0.36, y: 0.5, z: 8.64}
+    m_Extent: {x: 6.69, y: 1, z: 8.9}
   value: 1
 --- !u!1 &476495684
 GameObject:

@@ -17,6 +17,7 @@ public class Collector : MonoBehaviour
         if (collectable != null)
         {
             sum += collectable.value;
+            collectable.TeleportRandom();
             UpdateText();
         }
     }
