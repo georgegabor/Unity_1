@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 311742938}
   - component: {fileID: 311742937}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,8 +815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounds:
-    m_Center: {x: -0.36, y: 0.5, z: 8.64}
-    m_Extent: {x: 6.69, y: 1, z: 8.9}
+    m_Center: {x: -0.36, y: 1.72, z: 8.64}
+    m_Extent: {x: 6.69, y: 0.7, z: 9.21}
   value: 1
 --- !u!1 &476495684
 GameObject:
@@ -2125,8 +2125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 111.5}
-  m_SizeDelta: {x: -1088, y: -253}
+  m_AnchoredPosition: {x: 255, y: 111.5}
+  m_SizeDelta: {x: -690, y: -253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545355443
 MonoBehaviour:
