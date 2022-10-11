@@ -328,7 +328,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 1
 --- !u!114 &532093449
@@ -344,7 +344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 532093448}
-  force: 5
+  jumpForce: 5
+  airJumps: 3
 --- !u!1 &2091200666
 GameObject:
   m_ObjectHideFlags: 0
