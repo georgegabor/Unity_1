@@ -6,6 +6,7 @@ public class CharacterMover2D : MonoBehaviour
     [SerializeField] new Rigidbody2D rigidbody;
     [SerializeField] float jumpForce = 5;
     [SerializeField] float moveForce = 5;
+    [SerializeField] float moveSpeed = 5;
     [SerializeField] int airJumps = 3;
 
     bool isOnGround = false;
@@ -35,7 +36,22 @@ public class CharacterMover2D : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
 
-        rigidbody.AddForce(Vector2.right * x * moveForce);
+        if (isOnGround)
+        {
+            Vector2 v = rigidbody.velocity;
+            v.x = x * moveSpeed;
+            rigidbody.velocity = v;
+        }
+        else
+        {
+            rigidbody.AddForce(Vector2.right * x * moveForce);
+
+            Vector2 v = rigidbody.velocity;
+            float direction = Mathf.Sign(v.x);
+            float horizontalSpeed = Mathf.Abs(v.x);
+            v.x = Mathf.Min(horizontalSpeed, moveSpeed) * direction;
+            rigidbody.velocity = v;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
