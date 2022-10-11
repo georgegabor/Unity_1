@@ -8,6 +8,8 @@ public class CharacterMover2D : MonoBehaviour
     [SerializeField] float moveForce = 5;
     [SerializeField] float moveSpeed = 5;
     [SerializeField] int airJumps = 3;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask canJumpLayer;
 
     bool isOnGround = false;
     int jumpCounts = 0;
@@ -56,8 +58,19 @@ public class CharacterMover2D : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isOnGround = true;
-        jumpCounts = airJumps + 1;
+        int layer = collision.gameObject.layer;
+
+        if (groundLayer.value != 0 && layer != 0)
+        {
+            isOnGround = true;
+
+            if (canJumpLayer.value != 0 & layer != 0)
+            {
+                jumpCounts = airJumps + 1;
+            }
+            else
+                jumpCounts = 0;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
