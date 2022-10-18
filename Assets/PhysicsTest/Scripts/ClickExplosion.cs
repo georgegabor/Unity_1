@@ -7,6 +7,7 @@ public class ClickExplosion : MonoBehaviour
     [SerializeField] float range = 10;
     [SerializeField] float upward = 3;
     [SerializeField] LayerMask rayCastLayers;
+    [SerializeField] ParticleSystem particleSystem;
 
     Rigidbody[] rigidbodies;
     Vector3 lastRayHit;
@@ -20,17 +21,19 @@ public class ClickExplosion : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Camera _cam = Camera.main;
-            Vector3 _mousePos = Input.mousePosition;
-            Ray _ray = _cam.ScreenPointToRay(_mousePos);
-            bool _doesHit = Physics.Raycast(_ray, out RaycastHit _hit, 100, rayCastLayers);
+            Camera cam = Camera.main;
+            Vector3 mousePos = Input.mousePosition;
+            Ray ray = cam.ScreenPointToRay(mousePos);
+            bool doesHit = Physics.Raycast(ray, out RaycastHit _hit, 100, rayCastLayers);
 
             // e.g If using a rifle
             // Ray otherRay = new Ray(transform.position, transform.forward);
 
-            if (_doesHit)
+            if (doesHit)
             {
                 lastRayHit = _hit.point;
+                particleSystem.Play();
+                transform.position = lastRayHit;
                 // Debug.Log("Name: " + _hit.collider.name + " Point:  " + _lastRayHit);
                 ExplodeAll(lastRayHit);
             }
