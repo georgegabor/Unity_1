@@ -60,16 +60,22 @@ public class CharacterMover2D : MonoBehaviour
     {
         int layer = collision.gameObject.layer;
 
-        if (groundLayer.value != 0 && layer != 0)
+        Debug.Log("canJumpLayer.value: " + canJumpLayer.value);
+        Debug.Log("groundLayer.value: " + groundLayer.value);
+        Debug.Log("layer: " + layer);
+        Debug.Log("collision.collider.name: " + collision.collider.name);
+
+        if (groundLayer.Contains(layer))
         {
             isOnGround = true;
+        }
 
-            if (canJumpLayer.value != 0 & layer != 0)
-            {
-                jumpCounts = airJumps + 1;
-            }
-            else
-                jumpCounts = 0;
+        if (canJumpLayer.Contains(layer))
+        {
+
+
+            jumpCounts = airJumps + 1;
+
         }
     }
 
