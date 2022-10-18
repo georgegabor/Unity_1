@@ -23,7 +23,7 @@ public class CharacterMover2D : MonoBehaviour
     {
         bool isJump = Input.GetKeyDown(KeyCode.Space);
 
-        if (isJump && (isOnGround || jumpCounts > 0))
+        if (isJump && (jumpCounts > 0))
         {
             Vector2 v = rigidbody.velocity;
             v.y = 0;
@@ -60,22 +60,17 @@ public class CharacterMover2D : MonoBehaviour
     {
         int layer = collision.gameObject.layer;
 
-        Debug.Log("canJumpLayer.value: " + canJumpLayer.value);
-        Debug.Log("groundLayer.value: " + groundLayer.value);
-        Debug.Log("layer: " + layer);
         Debug.Log("collision.collider.name: " + collision.collider.name);
 
         if (groundLayer.Contains(layer))
         {
             isOnGround = true;
+            jumpCounts = 0;
         }
 
         if (canJumpLayer.Contains(layer))
         {
-
-
             jumpCounts = airJumps + 1;
-
         }
     }
 
