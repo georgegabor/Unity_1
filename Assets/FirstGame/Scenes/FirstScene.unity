@@ -1446,6 +1446,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6670459644641743518, guid: 5109f1590138431f9af2bd76b34b322c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6670459644641743521, guid: 5109f1590138431f9af2bd76b34b322c, type: 3}
       propertyPath: m_Name
       value: Terrain
@@ -2283,38 +2287,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 973336935}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[1].time
-      value: 1.9812152
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[2].time
-      value: 4.526188
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[1].value
-      value: 4.2034893
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[2].value
-      value: 4.160121
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[1].inSlope
-      value: -1.4093541
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[2].inSlope
-      value: -1.2363565
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[1].outSlope
-      value: -1.4093541
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449937402436239542, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
-      propertyPath: speedOverDistance.m_Curve.Array.data[2].outSlope
-      value: -1.2363565
-      objectReference: {fileID: 0}
     - target: {fileID: 3449937402436239543, guid: bbaaf9dd289a5fb4ca8899b1dfc5f1ff, type: 3}
       propertyPath: m_Name
       value: Enemy (1)

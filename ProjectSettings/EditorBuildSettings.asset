@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/FirstGame/Scenes/FirstScene.unity
+    guid: dca96f4fc0a441f4eab4afa98332716c
+  - enabled: 1
+    path: Assets/PhysicsTest/Scenes/2D Scene.unity
+    guid: 83272bca2f05e734b90b91951cd630c8
+  - enabled: 1
+    path: Assets/PhysicsTest/Scenes/ExplosionScene.unity
+    guid: 2ae6dc94ab085f54ab709d0f950e0947
   m_configObjects: {}
