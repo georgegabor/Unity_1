@@ -6,8 +6,10 @@ public class Shooter : MonoBehaviour
 {
     enum ShootingPattern
     {
-        Random, Sequence
+        Random, Sequence, Keyboard
     }
+
+    // todo implement Keyboard
 
     [Header("Inputs")]
     [SerializeField] GameObject[] projectilePrototypes;
