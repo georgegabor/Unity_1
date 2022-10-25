@@ -6,6 +6,7 @@ public class AutoDestroyer : MonoBehaviour
 {
 
     [Header("Inputs")]
+    [Tooltip("How many seconds before the object gets destroyed")]
     [SerializeField] float destructionTime = 1;
 
     float startTime;

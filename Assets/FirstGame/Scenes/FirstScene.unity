@@ -1700,7 +1700,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724bdecb5c370124fab528f9d90ab18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrototype: {fileID: 2110834658406454767, guid: dc4639b91a90ac848acbf4db1fa4846e, type: 3}
+  projectilePrototypes:
+  - {fileID: 2110834658406454767, guid: dc4639b91a90ac848acbf4db1fa4846e, type: 3}
+  - {fileID: 2110834658406454767, guid: 0885cfded0b242e4f99feb38cc2d13b1, type: 3}
+  - {fileID: 2110834658406454767, guid: c1487cbe7321e7e4c82f708e357d36d3, type: 3}
+  - {fileID: 2110834658406454767, guid: 66a68291197380243b0cd2fd18dfa181, type: 3}
   speed: 25
 --- !u!1 &1498558359
 GameObject:

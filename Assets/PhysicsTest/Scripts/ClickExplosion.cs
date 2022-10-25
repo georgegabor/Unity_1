@@ -7,7 +7,7 @@ public class ClickExplosion : MonoBehaviour
     [SerializeField] float range = 10;
     [SerializeField] float upward = 3;
     [SerializeField] LayerMask rayCastLayers;
-    [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] new ParticleSystem particleSystem;
 
     Rigidbody[] rigidbodies;
     Vector3 lastRayHit;
