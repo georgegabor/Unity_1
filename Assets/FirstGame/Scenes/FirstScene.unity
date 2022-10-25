@@ -1706,6 +1706,7 @@ MonoBehaviour:
   - {fileID: 2110834658406454767, guid: c1487cbe7321e7e4c82f708e357d36d3, type: 3}
   - {fileID: 2110834658406454767, guid: 66a68291197380243b0cd2fd18dfa181, type: 3}
   speed: 25
+  pattern: 0
 --- !u!1 &1498558359
 GameObject:
   m_ObjectHideFlags: 0
