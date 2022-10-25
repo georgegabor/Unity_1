@@ -5,13 +5,15 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     [Header("Inputs")]
-    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject projectilePrototype;
     [SerializeField] float speed = 25;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            GameObject projectile = Instantiate(projectilePrototype);
+
             projectile.transform.position = transform.position;
 
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
