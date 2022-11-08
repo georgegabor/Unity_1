@@ -1,13 +1,16 @@
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
 
 public class Damageable : MonoBehaviour
 {
     [SerializeField] int health;
     [SerializeField] TMP_Text displayedText;
     [SerializeField] Behaviour behaviour;
+    [SerializeField] float invicibilityFrames = 5;
 
+    bool isInvincible = false;
     void Start()
     {
         UpdateText();
@@ -15,7 +18,14 @@ public class Damageable : MonoBehaviour
 
     public void Damage(int damage)
     {
+        if (isInvincible)
+        {
+            return;
+        }
+
         health -= damage;
+
+        StartCoroutine(InvincibilityCoroutine());
 
         if (health < 0)
         {
@@ -24,6 +34,13 @@ public class Damageable : MonoBehaviour
         }
 
         UpdateText();
+    }
+
+    IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invicibilityFrames);
+        isInvincible = false;
     }
 
     public bool IsAlive()

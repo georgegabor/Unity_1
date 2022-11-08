@@ -80,6 +80,12 @@ public class Shooter : MonoBehaviour
         count++;
     }
 
+    private void Start()
+    {
+        Debug.Log("Start");
+
+    }
+
     private void Awake()
     {
 
