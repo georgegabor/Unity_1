@@ -44,4 +44,9 @@ public class PlayerMover : MonoBehaviour
                     angularSpeed * Time.deltaTime);
         }
     }
+
+    public void StepDown()
+    {
+        Debug.Log("StepDown");
+    }
 }

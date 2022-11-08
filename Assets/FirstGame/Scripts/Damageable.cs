@@ -11,9 +11,13 @@ public class Damageable : MonoBehaviour
     [SerializeField] float invicibilityFrames = 5;
 
     bool isInvincible = false;
+    int startHealth;
     void Start()
     {
+        startHealth = health;
+        health = PlayerPrefs.GetInt("health", health);
         UpdateText();
+
     }
 
     public void Damage(int damage)
@@ -24,6 +28,7 @@ public class Damageable : MonoBehaviour
         }
 
         health -= damage;
+        PlayerPrefs.SetInt("health", health);
 
         StartCoroutine(InvincibilityCoroutine());
 
@@ -31,6 +36,7 @@ public class Damageable : MonoBehaviour
         {
             health = 0;
             behaviour.enabled = false;
+            PlayerPrefs.SetInt("health", startHealth);
         }
 
         UpdateText();
