@@ -8,6 +8,9 @@ public class PlayerMover : MonoBehaviour
     [SerializeField]
     float angularSpeed = 180;
 
+    [SerializeField]
+    Animator animator;
+
     void Update()
     {
         bool up = Input.GetKey(KeyCode.UpArrow);
@@ -28,7 +31,10 @@ public class PlayerMover : MonoBehaviour
 
         transform.position += velocity * Time.deltaTime * speed;
 
-        if (velocity != Vector3.zero)
+        bool isRunning = velocity != Vector3.zero;
+        animator.SetBool("isRunning", isRunning);
+
+        if (isRunning)
         {
             Quaternion targetRot = Quaternion.LookRotation(velocity);
             transform.rotation =

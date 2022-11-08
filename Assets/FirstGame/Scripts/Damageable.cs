@@ -38,9 +38,29 @@ public class Damageable : MonoBehaviour
 
     IEnumerator InvincibilityCoroutine()
     {
+        const float flickTime = 0.1f;
         isInvincible = true;
-        yield return new WaitForSeconds(invicibilityFrames);
+
+        bool visible = false;
+        for (int i = 0; i < invicibilityFrames / flickTime; i++)
+        {
+            SetVisibility(visible);
+            visible = !visible;
+            yield return new WaitForSeconds(invicibilityFrames);
+        }
+
+        SetVisibility(true);
         isInvincible = false;
+    }
+
+    private void SetVisibility(bool isVisible)
+    {
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+
+        foreach (var renderer in renderers)
+        {
+            renderer.enabled = isVisible;
+        }
     }
 
     public bool IsAlive()
